@@ -14,10 +14,13 @@ app.get("/", (req, res) =>{
     res.send('hello there');    
 });
 
-
+app.get("/units/:unitId/mannings", (req, res) => {
+    logger.info(`/units/${req.params.unitId}/mannings GET request`);
+    res.send(req.params.unitId);
+    logger.info(`sent all mannings of the ${req.params.unitId} unit`);
+});
 
 app.use("/jobs", jobsRouter);
 app.listen(PORT, () => {
-    console.log(`server is up and running in ${HOST}:${PORT}`);
     logger.info(`server is up and running in ${HOST}:${PORT}`);
 });

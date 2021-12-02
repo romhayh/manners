@@ -3,6 +3,10 @@
 
 ## mannings
 
+`GET` all mannings of a certain unit
+```
+/units/:unitId/mannings
+```
 
 
 ## jobs
