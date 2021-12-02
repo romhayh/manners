@@ -1,4 +1,4 @@
-import express, { Response } from 'express';
+import express from 'express';
 import {logger} from './logger';
 import {router as jobsRouter} from './routes/jobs';
 require('dotenv').config(); 
