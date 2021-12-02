@@ -4,9 +4,9 @@ import { logger } from '../logger';
 
 export const router = express.Router();
 
-router.get("/units/:unitId", (req, res) => {
-    logger.info(`/jobs/units/${req.params.unitId} GET request`);
-    res.send(req.params.unitId);
+router.get("", (req, res) => {
+    logger.info(`/jobs GET request`);
+    res.send('jobs');
     logger.info(`sent a response`);
 });
 
