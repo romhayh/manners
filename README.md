@@ -12,7 +12,7 @@
 
 `GET` | a the manning for a job in a certain unit
 ```
-mannings/job/:job?unitId=:unitID
+/mannings/job/:job?unitId=:unitID
 ``` 
 ---
 
