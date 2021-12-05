@@ -2,8 +2,9 @@ import express from 'express';
 import { logger } from './logger';
 
 import { router as jobsRouter } from './routes/jobs';
-import { router as manningsRouter} from './routes/mannings';
+import { router as manningsRouter } from './routes/mannings';
 import { router as rolesRouter } from './routes/roles';
+import { router as jobOptionsRouter } from './routes/jobOptions';
 
 require('dotenv').config();
 
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 app.use("/jobs", jobsRouter);
 app.use("/mannings", manningsRouter);
 app.use("/roles", rolesRouter);
+app.use("/jobOptions", jobOptionsRouter)
 
 app.use(function (req, res, next) {
     res.status(404);
