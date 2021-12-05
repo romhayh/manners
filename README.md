@@ -6,31 +6,31 @@
 
 `GET` | all mannings of a certain unit
 ```
-/units/:unitId/mannings
+/mannings?unitId=:unitID
 ```
 ---
 
 `GET` | a the manning for a job in a certain unit
 ```
-/units/:unitId/mannings/:job
+mannings/job/:job?unitId=:unitID
 ``` 
 ---
 
 `PUT` | update or insert (if it doesn't exists) a manning for a job in a certain unit
 ```
-/units/:unitId/mannings/:job
+/mannings/:manningId
 ```
 the request body needs to be of this shape:
-
 ```ts
 {
-    "unitId":number,
-    "manning" : string,
-    "role"? : string
+    "unitId": string,
+    "job"; string,
+    "name" : string || "role" : string
 }
 ```
 
 ---
+</br>
 
 ## jobs
 ---
@@ -38,4 +38,27 @@ the request body needs to be of this shape:
 ```
 /jobs
 ```
+
+---
+</br>
+
+## roles
+`GET` | all roles
+```
+/roles
+```
+
+---
+</br>
+
+## job-options
+those are the roles that are able to man the certain job
+for example a מח"ט can be a מפקד טורן.
+
+---
+`GET` | all jobs options
+```
+/jobs-options
+```
+---
 
