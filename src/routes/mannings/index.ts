@@ -51,7 +51,7 @@ const data: Manning[] = JSON.parse(fs.readFileSync('db/mannings.json', 'utf8'));
 router.get("", (req, res) => {
     const unvalidatedUnitId = req.query.unitId;
 
-    logger.info(`/mannings/units/${unvalidatedUnitId} GET request`);
+    logger.info(`/mannings?unitId=${unvalidatedUnitId} GET request`);
     try {
         Joi.assert(unvalidatedUnitId, unitIdValidator.schema, unitIdValidator.errorMessage + ',');
         const unitId = +<string>unvalidatedUnitId;
