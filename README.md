@@ -6,13 +6,13 @@
 
 `GET` | all mannings of a certain unit
 ```
-/mannings?unitId=:unitID
+/mannings?unitId=unitID
 ```
 ---
 
-`GET` | a the manning for a job in a certain unit
+`GET` | a manning for a job in a certain unit
 ```
-/mannings/job/:job?unitId=:unitID
+/mannings?job=job&unitId=unitID
 ``` 
 ---
 
@@ -23,8 +23,8 @@
 the request body needs to be of this shape:
 ```ts
 {
-    "unitId": string,
-    "job"; string,
+    "unitId": number,
+    "job": string,
     "name" : string || "role" : string
 }
 ```
