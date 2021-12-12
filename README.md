@@ -25,7 +25,7 @@ the request body needs to be of this shape:
 {
     "unitId": number,
     "job": string,
-    "name" : string || "role" : string
+    "name" : string || "option" : string
 }
 ```
 
@@ -42,17 +42,17 @@ the request body needs to be of this shape:
 ---
 </br>
 
-## roles
-`GET` | all roles
+## options
+`GET` | all options
 ```
-/roles
+/options
 ```
 
 ---
 </br>
 
 ## job-options
-those are the roles that are able to man the certain job
+those are the options that are able to man the certain job
 for example a מח"ט can be a מפקד טורן.
 
 ---

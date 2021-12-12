@@ -1,8 +1,8 @@
-import express from 'express';
+import { Router } from 'express';
 import { logger } from '../../logger';
 import fs from 'fs';
 
-export const router = express.Router();
+export const router = Router();
 const data = JSON.parse(fs.readFileSync('db/jobs.json', 'utf8'));
 
 router.get("", (req, res) => {

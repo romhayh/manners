@@ -1,6 +1,6 @@
 import express from 'express';
-import { logger } from '../../logger';
 import fs from 'fs';
+import { logger } from '../../logger';
 
 export const router = express.Router();
 const data = JSON.parse(fs.readFileSync('db/jobOptions.json', 'utf8'));

@@ -3,21 +3,21 @@
     "manningId": 1,
     "unitId": 10,
     "job": "שומר שג",
-    "role": "משק מערכת",
+    "option": "משק מערכת",
     "name": "ה' צבאות"
   },
   {
     "manningId": 1,
     "unitId": 10,
     "job": "חפ\"ש",
-    "role": "משק מערכת",
+    "option": "משק מערכת",
     "name": "אני"
   },
   {
     "manningId": 1,
     "unitId": 10,
     "job": "חפ\"ש",
-    "role": "משק מערכת",
+    "option": "משק מערכת",
     "name": "ה' צבאות"
   },
   {
