@@ -1,7 +1,7 @@
 import express from 'express';
 import { logger } from './logger';
 
-import { router as jobsRouter } from './routes/jobs';
+import { jobsRouter } from './api/jobs';
 import { router as manningsRouter } from './routes/mannings';
 import { router as optionsRouter } from './routes/options';
 import { router as jobOptionsRouter } from './routes/jobOptions';

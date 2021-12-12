@@ -1,18 +1,14 @@
 import express from 'express';
-import { logger } from '../../logger';
 import Joi from 'joi';
 import fs from 'fs';
-import { jobValidator, manningIdValidator, manningValidator, unitIdValidator } from '../../types/validators';
+
+import { logger } from '../../logger';
+import { Manning, manningIdValidator, manningValidator } from '../../types/mannings';
+import { jobValidator } from '../../types/jobs';
+import { unitIdValidator } from '../../types/units';
+
 
 export const router = express.Router();
-
-interface Manning {
-    manningId: number,
-    unitId: number,
-    job: string,
-    option: string,
-    name: string
-}
 
 const data: Manning[] = JSON.parse(fs.readFileSync('db/mannings.json', 'utf8'));
 
