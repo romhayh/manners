@@ -1,12 +1,13 @@
-import express from 'express';
 import fs from 'fs';
-import { logger } from '../../logger';
 
-export const router = express.Router();
-const data = JSON.parse(fs.readFileSync('db/jobOptions.json', 'utf8'));
+import { logger } from '../logger';
+import { JobOption } from '../types/jobOptions';
 
-router.get("", (req, res) => {
-    logger.info("/job-options GET request");
-    res.send(data);
-    logger.info("sent all options for all the jobs");
-})
+const jobOptions : JobOption[] = JSON.parse(fs.readFileSync('db/jobOptions.json', 'utf8'));
+
+export const getAllJobOptions : () => JobOption[] = () => {
+    logger.info(`dal: retriving ${jobOptions.length} job-options`);
+    return jobOptions;
+} 
+
+export default {getAllJobOptions};

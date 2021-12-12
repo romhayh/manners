@@ -3,8 +3,8 @@ import { logger } from './logger';
 
 import { jobsRouter } from './api/jobs';
 import { router as manningsRouter } from './routes/mannings';
-import { router as optionsRouter } from './routes/options';
-import { router as jobOptionsRouter } from './routes/jobOptions';
+import { optionsRouter } from './api/options';
+import { jobOptionsRouter } from './api/jobOptions';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 dotenv.config();
@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use("/jobs", jobsRouter);
 app.use("/mannings", manningsRouter);
 app.use("/options", optionsRouter);
-app.use("/jobOptions", jobOptionsRouter)
+app.use("/job-options", jobOptionsRouter)
 const { HOST, PORT } = process.env;
 
 
