@@ -1,8 +1,8 @@
 import {Router} from 'express';
 
 import {logger} from '../../logger';
-import bl from '../../bl';
+import {getAllJobs} from './get';
 
 export const jobsRouter = Router();
 
-jobsRouter.get('',  bl.getAllJobs);
+jobsRouter.get('',  getAllJobs);

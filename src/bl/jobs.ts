@@ -1,11 +1,6 @@
-import { Response, Request, NextFunction} from 'express';
+import dal from '../dal';
 
-import {logger} from '../logger';
-import dal from '../dal/jobs';
-
-export const getAllJobs = () => {
-    logger.info(`bl: get all jobs`);
-    
+export const getAllJobs = () => {    
     return dal.getAllJobs();
 };
 

@@ -1,3 +1,4 @@
 import jobs from './jobs';
+import options from './options';
 
-export default {...jobs};
+export default {...jobs, ...options};
