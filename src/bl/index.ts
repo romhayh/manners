@@ -1,5 +1,7 @@
 import jobs from './jobs';
 import options from './options';
-import jobOptions from '../dal/jobOptions';
+import jobOptions from './jobOptions';
+import mannings from './mannings';
 
-export default {...jobs, ...options, ...jobOptions};
+
+export default {...jobs, ...options, ...jobOptions, ...mannings};
