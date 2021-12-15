@@ -1,8 +1,15 @@
-import dal from '../dal';
+import mannings from '../dal/mannings';
 import { Manning } from '../types/mannings';
 
-export const getAllMannings : (unitId : number) => Manning[] = (unitId) => {
-    return dal.getAllMannings(unitId);
+export const getAllMannings: (unitId: number) => Manning[] = (unitId) => {
+    return mannings.getAllMannings(unitId);
 }
 
-export default {getAllMannings};
+export const upsertManning: (manning: Manning) => void = (manning) => {
+    if (mannings.exists(manning.manningId)){
+        mannings.updateManning(manning);
+    }
+    mannings.insertManning(manning);
+}
+
+export default { getAllMannings };

@@ -35,4 +35,9 @@ export const updateManning: (manning: Manning) => void = (manning) => {
     updateManningsFile();
 }
 
+export const exists : (manningId : number) => boolean = (manningId) => {
+    return mannings.some(manning => manning.manningId === manningId);
+}
+
+
 export default { getAllMannings, insertManning, updateManning };
