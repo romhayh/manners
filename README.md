@@ -23,7 +23,7 @@
 the request body needs to be of this shape:
 ```ts
 {
-    "manningId" : number,
+    "manningId" : number,   
     "unitId": number,
     "job": string,
     "name" : string || "option" : string

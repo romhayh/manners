@@ -12,10 +12,16 @@ const updateManningsFile: () => void = () => {
     fs.writeFileSync(MANNIGS_FILE, JSON.stringify(mannings), 'utf-8') 
 }
 
-export const getAllMannings: (unitId: number) => Manning[] = (unitId) => {
+export const getMannings: (unitId: number, job : string | undefined) => Manning[] = (unitId, job) => {
     logger.info(`dal: get all mannings request of unit ${unitId}`);
-    logger.info(`dal: retrived ${mannings.length} mannings`);
-    return mannings;
+    
+    const unitMannings = mannings.filter(manning => manning.unitId === unitId) || [];
+
+    if (job){
+        return unitMannings.filter(manning => manning.job === job) || [];
+    }
+
+    return unitMannings;
 };
 
 export const insertManning: (manning: Manning) => void = (manning) => {
@@ -40,4 +46,4 @@ export const exists : (manningId : number) => boolean = (manningId) => {
 }
 
 
-export default { getAllMannings, insertManning, updateManning };
+export default { getMannings, insertManning, updateManning, exists };
