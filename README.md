@@ -18,11 +18,12 @@
 
 `PUT` | update or insert (if it doesn't exists) a manning for a job in a certain unit
 ```
-/mannings/:manningId
+/mannings
 ```
 the request body needs to be of this shape:
 ```ts
 {
+    "manningId" : number,
     "unitId": number,
     "job": string,
     "name" : string || "option" : string
